@@ -1,106 +1,177 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
 body{
     background: linear-gradient(to bottom, #0f0f0f, #1a1a2e);
-}
-ul{
- display: flex;
-width: 50%;  
-justify-content: space-evenly;
-margin-right: auto;
-    
+    height: 100vh;
+    width: 100%;
 }
 .navbar{
     display: flex;
-    width: 100%;
-}
-.navbar input{
-background-color: #1a1a1a;
-color: white;
-border: 1px solid #444;
-width: 12%;
-height: 7vh;
-}
-.navbar a{
-    margin-right:auto ;
-    text-decoration: none;
-    color: #e6c068;
-}
+    justify-content: space-between;
+    padding: 1% 10% 3% 1%;
+    background-color: #04030c8f;
+    align-items: center;
+}   
 ul li{
+    display: inline-block;
+    margin-left:1.5rem;
     background-color: #8b0000;
-color: white;
-font-size: x-large;
-list-style-type: none;
+    color: white;
 }
-#matger{
-    height: 90vh;
-    width: 100%;
-}
-#matger:hover{          
- animation-name:sa;
-    animation-duration:1.5s; 
-}
-@keyframes sa{
-    0%{opacity: 0;}
-    25%{opacity: .25;}
-    50%{opacity: .50;}
-    100%{opacity: 1 ;}
-}
-.tas{
-    margin-left: 30px;
-    margin-top: 13px;
-    font-size: x-large;
+li a{
     text-decoration: none;
     color: #e6c068;
+    font-size: 1.3rem;
+}
+.searsh input{
+    height: 5.5vh;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}.searsh .tas{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #e6c068;
+    padding-left: 1.5rem;
+}
+.tas:hover{
+    color: red;
+}
+ul a:hover{
+    color: white;
+}
+.ra img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 #sor{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-evenly;
+    gap: 25px;
 }
 .sos{
-    width: 300px;
-    height: 350px;
     object-fit: cover;
-    border-radius: 20px;
-    margin-top: 25px;
-    transition: 0.3s ease;
-
+    height: 300px;
+    margin-top: 5rem;
+   transition: transform 0.5s ease, filter 0.5s ease;
+   border-radius: 5px;
 }
 .sos:hover{
-    transform: scale(1.08) translateY(-5px);
+     transform: scale(1.1);
     filter: brightness(1.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-.sm{
-    text-decoration: none;
+.op{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
 }
-#op{
+.op h2{
+    color: #e6c068;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    padding-right: 2%;
+}
+.op p{
+    font-size: 1.5rem;
+    margin-bottom: 7%;
+    padding-right: 2%;
+    color: aliceblue;
+}
+.op .img{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.op img{
+    width: 80%;
+    display: block;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.op img:hover{
+  transform: scale(1.1);
+    filter: brightness(1.1);
+          
+}
+.et{
     display: flex;
     justify-content: center;
 }
-#mn{
-height: 70vh;
-width: 50%;
-margin-top: 25px;
-border-radius: 15px;
-}   
-#ol{
-    display: flex;
-    flex-direction: column;
-}
-.iu{
-    font-size: 1.5rem;
-    color: #cfcfcf;
-    margin-top: 25px;
-}
-h3{
-    
-    font-size: 4rem;
+.et h3{
+    margin: 2rem 3rem;
+    font-size: 3rem;
     color: #e6c068;
-    margin-bottom: 2%;
+    background-color: red;
+    width: fit-content;
+
+}
+.et h3:hover{
+    color: white;
+}
+.hg{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
 }
 .zx{
-    height: 15vh;
-    width: 15wh;
-    margin-top: auto;
-    margin-left: 1%;
+    width:5rem;
+    border-radius: 5px;
+     transition: transform 0.5s ease, filter 0.5s ease;
+}
+.zx:hover{
+     transform: scale(1.1);
+    filter: brightness(1.1);
+}
+@media (max-width: 768px)
+{
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    
+    }
+    ul{
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+    .searsh{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .op{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .op h2{
+       margin-top: 2rem;
+        font-size: 2rem;
+    }
+    .op p{
+        font-size: 1rem;
+    }
+    .zx{
+        width: 3rem;
+    }
+}
+@media (max-width: 1024px)
+{
+    ul{
+        display: flex;
+        gap: 15px;
+    }
+    .searsh{
+        display: flex;
+        gap: 15px;
+        }
 }
